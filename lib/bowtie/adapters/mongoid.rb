@@ -3,7 +3,7 @@ module Bowtie
 	def self.models
 		models = Object.constants
                    .collect { |sym| Object.const_get(sym) }
-                   .select { |constant| constant.class == Class && constant.include?(Mongoid::Document) }
+                   .select { |constant| constant.class == Class && constant.include?(Mongoid::Document) && !constant.embedded? }
 	end
 
   def self.search(model, q, page)
