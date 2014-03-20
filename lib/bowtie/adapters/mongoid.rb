@@ -92,21 +92,19 @@ module Bowtie
 		end
 
 		def boolean_fields
-			s = []
-			self.fields.each {|k,v| s << k if v.options[:type] == Boolean}
-			s.compact
+      fields_for_type(Boolean)
 		end
 
     def hash_fields
-			s = []
-			self.fields.each {|k,v| s << k if v.options[:type] == Hash}
-			s.compact
+      fields_for_type(Hash)
 		end
 
+    def array_fields
+      fields_for_type(Array)
+    end
+
 		def searchable_fields
-			s = []
-			self.fields.each {|k,v| s << k if v.options[:type] == String && k != "_type"}
-			s.compact
+      fields_for_type(String) - ["_type"]
 		end
 
     def subtypes
@@ -124,6 +122,12 @@ module Bowtie
 		def relation_keys_include?(key)
 			self.associations.map {|rel| true if key.to_sym == rel[1].name}.reduce
 		end
+
+    def fields_for_type(type)
+      s = []
+			self.fields.each {|k,v| s << k if v.options[:type] == type}
+			s.compact
+    end
 
   end
 

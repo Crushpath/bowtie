@@ -60,6 +60,7 @@ class Hash
 		self.filter_inaccessible_in(model)
         .include_missing_booleans_in(model)
         .parse_hash_fields(model)
+        .parse_array_fields(model)
         .normalize
 	end
 
@@ -78,6 +79,15 @@ class Hash
   def parse_hash_fields(model)
     if model.respond_to?(:hash_fields)
       model.hash_fields.each do |field|
+        self[field] = eval(self[field])
+      end
+    end
+    self
+  end
+
+  def parse_array_fields(model)
+    if model.respond_to?(:array_fields)
+      model.array_fields.each do |field|
         self[field] = eval(self[field])
       end
     end
