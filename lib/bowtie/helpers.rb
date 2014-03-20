@@ -7,7 +7,13 @@ module Bowtie
 		end
 
 		def adapter_name
-			defined?(DataMapper) ? "DataMapper" : "MongoMapper"
+			if defined?(DataMapper)
+        'DataMapper'
+      elsif defined?(MongoMapper)
+        'MongoMapper'
+      elsif defined?(Mongoid)
+        'Mongoid'
+      end
 		end
 
 		def action_name
