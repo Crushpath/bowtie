@@ -11,8 +11,10 @@ if defined?(DataMapper)
 	end
 elsif defined?(MongoMapper)
 	%w(mongo_mapper adapters/mongomapper).each {|lib| require lib}
+elsif defined?(Mongoid)
+  %w(mongoid adapters/mongoid).each {|lib| require lib}
 else
-	raise Gem::LoadError, "No adapters found. You need to require MongoMapper (mongo_mapper) or DataMapper (dm-core) before requiring Bowtie."
+	raise Gem::LoadError, "No adapters found. You need to require MongoMapper (mongo_mapper), DataMapper (dm-core) or Mongoid (mongoid) before requiring Bowtie."
 end
 
 %w(sinatra helpers core_extensions admin).each {|lib| require lib}
