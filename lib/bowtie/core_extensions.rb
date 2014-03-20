@@ -57,7 +57,10 @@ end
 class Hash
 
 	def prepare_for_query(model)
-		self.filter_inaccessible_in(model).include_missing_booleans_in(model).normalize
+		self.filter_inaccessible_in(model)
+        .include_missing_booleans_in(model)
+        .parse_hash_fields(model)
+        .normalize
 	end
 
 	def filter_inaccessible_in(model)
@@ -71,6 +74,15 @@ class Hash
 		end
 		self
 	end
+
+  def parse_hash_fields(model)
+    if model.respond_to?(:hash_fields)
+      model.hash_fields.each do |field|
+        self[field] = eval(self[field])
+      end
+    end
+    self
+  end
 
 	# this is for checkboxes which give us a param of 'on' on the params hash
 	def normalize

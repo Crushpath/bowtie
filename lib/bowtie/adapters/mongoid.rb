@@ -97,6 +97,12 @@ module Bowtie
 			s.compact
 		end
 
+    def hash_fields
+			s = []
+			self.fields.each {|k,v| s << k if v.options[:type] == Hash}
+			s.compact
+		end
+
 		def searchable_fields
 			s = []
 			self.fields.each {|k,v| s << k if v.options[:type] == String && k != "_type"}
