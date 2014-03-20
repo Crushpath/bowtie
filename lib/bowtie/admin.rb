@@ -88,8 +88,7 @@ module Bowtie
 
 		put "/:model/:id" do
 			if request.xhr? # dont pass through hooks or put the boolean stuff
-				# if Bowtie.update!(resource, params[:resource].normalize)
-				if Bowtie.update!(resource, params[:resource].filter_inaccessible_in(model).normalize)
+				if Bowtie.update!(resource, params[:resource].prepare_for_query(model, {skip_missing_booleans: true}))
 					resource.to_json
 				else
 					false

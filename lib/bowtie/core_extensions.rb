@@ -56,12 +56,12 @@ end
 
 class Hash
 
-	def prepare_for_query(model)
+	def prepare_for_query(model, options={})
 		self.filter_inaccessible_in(model)
-        .include_missing_booleans_in(model)
-        .parse_hash_fields(model)
-        .parse_array_fields(model)
-        .normalize
+    self.include_missing_booleans_in(model) unless options[:skip_missing_booleans]
+    self.parse_hash_fields(model)
+    self.parse_array_fields(model)
+    self.normalize
 	end
 
 	def filter_inaccessible_in(model)
@@ -79,7 +79,7 @@ class Hash
   def parse_hash_fields(model)
     if model.respond_to?(:hash_fields)
       model.hash_fields.each do |field|
-        self[field] = eval(self[field])
+        self[field] = eval(self[field]) if self.has_key?(field)
       end
     end
     self
@@ -88,7 +88,7 @@ class Hash
   def parse_array_fields(model)
     if model.respond_to?(:array_fields)
       model.array_fields.each do |field|
-        self[field] = eval(self[field])
+        self[field] = eval(self[field]) if self.has_key?(field)
       end
     end
     self
