@@ -1,3 +1,5 @@
+require 'bowtie/configuration/index_parser'
+
 module Bowtie
   module Configuration
 
@@ -12,33 +14,9 @@ module Bowtie
     end
 
     def index(&block)
-      initialize_section(:index)
-      definitions[@klass][:index] = IndexParser.new(&block).result
-      clear_definitions(:index) if definitions[@klass][:index].empty?
-    end
-
-    def initialize_section(section)
-      definitions[@klass] = {}
-    end
-
-    def clear_definitions(section)
-      definitions[@klass].delete(section)
-    end
-
-    class IndexParser
-      def initialize(&block)
-        @columns = {}
-        instance_eval(&block)
-      end
-
-      attr_accessor :columns
-
-      def result
-        columns
-      end
-
-      def column(method)
-        columns[method] = true
+      index_parser = IndexParser.new(&block)
+      if index_parser.rules?
+        definitions[@klass][:index] = index_parser.rules
       end
     end
 
