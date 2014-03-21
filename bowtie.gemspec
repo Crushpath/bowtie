@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
               "lib/bowtie/admin.rb",
               "lib/bowtie/core_extensions.rb",
               "lib/bowtie/helpers.rb",
+              "lib/bowtie/configuration.rb",
               "lib/bowtie/views/errors.erb",
               "lib/bowtie/views/field.erb",
               "lib/bowtie/views/flash.erb",
