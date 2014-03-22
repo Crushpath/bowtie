@@ -71,6 +71,10 @@ module Bowtie
 			Bowtie.get_one(model, params[:id]) or halt(404, 'Resource not found!')
 		end
 
+    def index_page
+      @index_page ||= Bowtie::Views::Pages::Index.new(model)
+    end
+
 		# views, paths
 
 		def partial(name, *args)

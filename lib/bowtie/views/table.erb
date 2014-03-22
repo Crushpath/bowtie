@@ -3,7 +3,7 @@
 			<tr>
 			<th title="<%= @model.primary_key %>" class="<%= @model.primary_key %>-col"><%= @model.primary_key.to_s.upcase %></th>
 
-			<% @model.field_names.each do |f| %>
+      <% index_page.field_names.each do |f| %>
 				<% next if f == @model.primary_key or f.to_s[/_id$/] or f.to_s == '_type' %>
 				<th class="<%= f.to_s %>-col"><%= f.to_s.titleize %></th>
 			<% end %>

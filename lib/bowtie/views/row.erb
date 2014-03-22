@@ -1,7 +1,7 @@
 <tr id="resource-<%= @r.primary_key.to_s %>" class="<%= @r.state.to_s if @r.respond_to?(:state) %>">
 	<td class="<%= @model.primary_key %>-col"><a href="<%= url_for(@r) %>"><%= @r.primary_key %></a></td>
 
-	<% @model.field_names.each do |f| %>
+  <% index_page.field_names.each do |f| %>
 		<% next if f == @model.primary_key or f.to_s[/_id$/] or f.to_s == '_type' %>
 		<td class="<%= f %>-col editable"><%= truncate(@r.send(f), 64) || 'nil' %></td>
 	<% end %>
