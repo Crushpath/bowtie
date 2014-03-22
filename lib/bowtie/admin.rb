@@ -15,7 +15,7 @@ module Bowtie
 
 		use Rack::MethodOverride
 
-		set :views, File.dirname(__FILE__) + '/views'
+		set :views, File.dirname(__FILE__) + '/views/templates'
 
 		helpers do
 			include Helpers
