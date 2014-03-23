@@ -1,23 +1,23 @@
 <%=
 
-	name = @p
-	begin
-		value = @resource.send(@p)
-	rescue NoMethodError
-		value = ''
-	end
+  name = @p
+  begin
+    value = @resource.send(@p)
+  rescue NoMethodError
+    value = ''
+  end
 
-	html =''
+  html =''
 
-	case value.class.name
-		when "TrueClass", "FalseClass", /Boolean/
-			checked = value == true ? 'checked="checked"' : ''
-			html += '<input name="resource['+name.to_s+']" type="checkbox" '+checked+' />'
+  case value.class.name
+    when "TrueClass", "FalseClass", /Boolean/
+      checked = value == true ? 'checked="checked"' : ''
+      html += '<input name="resource['+name.to_s+']" type="checkbox" '+checked+' />'
     when "Hash", "Array"
       html += '<textarea name="resource['+name.to_s+']">'+value.to_s+'</textarea>'
-		else
-			html += '<input class="string" type="text" name="resource['+name.to_s+']" value="'+value.to_s+'" />'
-	end
-	html
+    else
+      html += '<input class="string" type="text" name="resource['+name.to_s+']" value="'+value.to_s+'" />'
+  end
+  html
 
- %>
+%>

@@ -9,6 +9,6 @@ require current_path + '/../lib/bowtie'
 add_demo_data! if Band.count == 0
 
 map "/admin" do
-	# BOWTIE_AUTH = {:user => 'admin', :pass => 'secret'}
-	run Bowtie::Admin
+  # BOWTIE_AUTH = {:user => 'admin', :pass => 'secret'}
+  run Bowtie::Admin
 end
