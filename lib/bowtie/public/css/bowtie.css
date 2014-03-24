@@ -5,14 +5,14 @@ http://forkhq.com
 ----------------------------------------- */
 
 *{
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body{
-	font-size: 14px;
-	font-family: Corbel, Calibri, Helvetica, Arial, sans-serif;
-	background: #efefef;
+  font-size: 14px;
+  font-family: Corbel, Calibri, Helvetica, Arial, sans-serif;
+  background: #efefef;
 }
 
 
@@ -20,8 +20,8 @@ a { color:#111; }
 .pager a{ color: #528e00; }
 
 p{
-	font-size: 1.2em;
-	margin: 1em 0;
+  font-size: 1.2em;
+  margin: 1em 0;
 }
 
 hr { border:0; border-top:5px solid #efefef;  margin:15px 0;}
@@ -30,18 +30,18 @@ hr { border:0; border-top:5px solid #efefef;  margin:15px 0;}
 -------------------------------------------------------------*/
 
 #flash{
-	text-align: center;
-	margin: 0;
-	padding: 5px;
-	color: white;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  color: white;
 }
 
 #flash.notice{
-	background: #ff9900;
+  background: #ff9900;
 }
 
 #flash.error{
-	background: #a00;
+  background: #a00;
 }
 
 /* headings
@@ -55,112 +55,112 @@ h2 { margin:10px 0; font-size:130%;}
 -------------------------------------------------------------*/
 
 #header {
-	background:#000;
-	padding: 8px 5% 0 5%;
-	border-bottom:1px solid #444;
-	border-bottom:5px solid #528e00;
+  background:#000;
+  padding: 8px 5% 0 5%;
+  border-bottom:1px solid #444;
+  border-bottom:5px solid #528e00;
 }
 #header h1 {
-	color:#333;
-	font-size: 3em;
-	font-weight:bold;
-	margin: 10px 0;
+  color:#333;
+  font-size: 3em;
+  font-weight:bold;
+  margin: 10px 0;
 }
 #header h1 a{
-	color: #fff;
-	text-decoration: none
+  color: #fff;
+  text-decoration: none
 }
 #header ul li {
-	display:inline;
+  display:inline;
 }
 
 #header ul li a {
-	color:#fff;
-	text-decoration:none;
-	margin-right:10px;
-	display:inline-block;
-	padding:8px;
-	-webkit-border-top-right-radius:6px;
-	-webkit-border-top-left-radius:6px;
-	-moz-border-top-right-radius: 6px;
-	-moz-border-top-left-radius: 6px;
+  color:#fff;
+  text-decoration:none;
+  margin-right:10px;
+  display:inline-block;
+  padding:8px;
+  -webkit-border-top-right-radius:6px;
+  -webkit-border-top-left-radius:6px;
+  -moz-border-top-right-radius: 6px;
+  -moz-border-top-left-radius: 6px;
 }
 
 #header ul li a:hover {
-	background:#333;
+  background:#333;
 }
 
 #header ul li.current a {
-	background: #528e00;
-	font-weight:bold;
-	color:#fff;
+  background: #528e00;
+  font-weight:bold;
+  color:#fff;
 }
 
 .subnav {
-	padding: 2px 50px 7px 50px;
-	background:#528e00;
-	font-size:90%;
-	margin: -20px -50px 20px;
+  padding: 2px 50px 7px 50px;
+  background:#528e00;
+  font-size:90%;
+  margin: -20px -50px 20px;
 }
 
 .subnav li {
-	display:inline;
+  display:inline;
 }
 
 .subnav li a {
-	color:#fff;
-	text-decoration:none;
-	margin-right:10px;
-	display:inline-block;
-	background:#89bf41;
-	padding:5px;
-	-webkit-border-radius:3px;
-	-moz-border-radius:3px;
+  color:#fff;
+  text-decoration:none;
+  margin-right:10px;
+  display:inline-block;
+  background:#89bf41;
+  padding:5px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
 }
 
 .subnav li.current a {
-	background: #fff;
-	font-weight:bold;
-	color:#528e00;
+  background: #fff;
+  font-weight:bold;
+  color:#528e00;
 }
 
 .subnav li a:active {
-	background:#8def08;
+  background:#8def08;
 }
 
 /* container
 -------------------------------------------------------------*/
 
 #container h1{
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 #container{
-	font-size: 1.3em;
-	background: #fff;
-	padding: 20px 50px 50px;
-	position: relative;
+  font-size: 1.3em;
+  background: #fff;
+  padding: 20px 50px 50px;
+  position: relative;
 }
 
 #search{
-	float: right;
-	margin-top: 10px;
+  float: right;
+  margin-top: 10px;
 }
 #search input{
-	width: 250px;
-	padding: 4px;
-	font-size: 1em;
-	color: #666;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
+  width: 250px;
+  padding: 4px;
+  font-size: 1em;
+  color: #666;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
 }
 
 .edit-button{
-		float: right;
-		margin: 15px 15px 0 0;
+    float: right;
+    margin: 15px 15px 0 0;
 }
 .edit-button.active{
-	color: green;
+  color: green;
 }
 
 
@@ -168,58 +168,58 @@ h2 { margin:10px 0; font-size:130%;}
 -------------------------------------------------------------*/
 
 table{
-	width: 100%;
-	margin: 0 auto;
-	border-collapse:collapse;
-	text-align: left;
+  width: 100%;
+  margin: 0 auto;
+  border-collapse:collapse;
+  text-align: left;
 }
 
 table tr td, table tr th {
-	border:1px solid #ccc;
-	padding:6px;
+  border:1px solid #ccc;
+  padding:6px;
 }
 
 table th{
-	padding: 4px 5px;
-	font-size: 1.1em;
-	color: #888;
-	text-align: left;
-	background:#efefef;
-	font-size:80%;
-	font-weight:bold;
+  padding: 4px 5px;
+  font-size: 1.1em;
+  color: #888;
+  text-align: left;
+  background:#efefef;
+  font-size:80%;
+  font-weight:bold;
 }
 
 table td{
-	padding: 0px; margin:0px;
-	border-bottom: 1px solid #ddd;
-	padding: 6px 5px;
-	color: #666;
+  padding: 0px; margin:0px;
+  border-bottom: 1px solid #ddd;
+  padding: 6px 5px;
+  color: #666;
 
 }
 
 table tr td.no-data {
-	text-align:center;
-	padding:40px 0;
-	color:#999;
-	font-style:italic;
-	font-size:130%;
+  text-align:center;
+  padding:40px 0;
+  color:#999;
+  font-style:italic;
+  font-size:130%;
 }
 
 table .center{
-	text-align: center;
+  text-align: center;
 }
 table .last{
-	text-align: right;
+  text-align: right;
 }
 
 table .check-column{
-	text-align: center;
+  text-align: center;
 }
 
 table .view-col,
 table .delete-col{
-	text-align: center;
-	width: 100px;
+  text-align: center;
+  width: 100px;
 }
 
 /* good states
@@ -228,24 +228,24 @@ table .delete-col{
 table tr.ok,
 table tr.active,
 table tr.enabled{
-	border-left: 5px solid #528e00;
+  border-left: 5px solid #528e00;
 }
 
 table tr.ok td,
 table tr.active td,
 table tr.enabled td{
-	background: #EFFFF0;
+  background: #EFFFF0;
 }
 
 /* "middle" states
 ---------------------------*/
 
 table tr.pending{
-/*	border-left: 5px solid #ffcc00;*/
+/*  border-left: 5px solid #ffcc00;*/
 }
 
 table tr.pending td{
-/*	background: #ebf9eb;*/
+/*  background: #ebf9eb;*/
 }
 
 /* bad states
@@ -255,36 +255,36 @@ table tr.deleted,
 table tr.cancelled,
 table tr.disabled,
 table tr.suspended{
-	border-left: 5px solid #a00;
+  border-left: 5px solid #a00;
 }
 
 table tr.deleted td,
 table tr.cancelled td,
 table tr.disabled td,
 table tr.suspended td{
-/*	background-color: #fbf5dc;*/
-	background-color: #FFEFEF;
+/*  background-color: #fbf5dc;*/
+  background-color: #FFEFEF;
 }
 
 table th.rel-col{
-	background: #999;
-	color: #fff;
-	text-align: center;
+  background: #999;
+  color: #fff;
+  text-align: center;
 }
 table td.rel-col {
-	background: #eee;
-	text-align: center;
+  background: #eee;
+  text-align: center;
 }
 
 table .icon{
-	position: relative;
-	top: 3px;
-	margin-right: 2px;
-	margin-top: -3px;
+  position: relative;
+  top: 3px;
+  margin-right: 2px;
+  margin-top: -3px;
 }
 
 table tr:hover td{
-	background: #ffffed;
+  background: #ffffed;
 }
 
 
@@ -292,59 +292,59 @@ table tr:hover td{
 -------------------------------------------------------------*/
 
 #assocs{
-	float: right;
-	font-size: 1.2em;
-	border: 1px solid #333;
-	padding: 5px 10px;
-	margin-top: 15px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	background-color: #fafafa;
+  float: right;
+  font-size: 1.2em;
+  border: 1px solid #333;
+  padding: 5px 10px;
+  margin-top: 15px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #fafafa;
 }
 
 /* forms
 -------------------------------------------------------------*/
 
 input:focus{
-	color: #333;
+  color: #333;
 }
 
 form.destroy button{
-	color: #666;
-	padding: 2px 5px;
+  color: #666;
+  padding: 2px 5px;
 }
 
 .big.destroy button{
-	font-size: 1em;
-	margin-bottom: 20px;
-	color: #a00;
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #a00;
 }
 
 .destroy button:hover{
-	cursor: pointer;
-	color: #000;
+  cursor: pointer;
+  color: #000;
 }
 
 form.resource small{
-	color: #ccc;
+  color: #ccc;
 }
 form.resource input,
 form.resource select,
 form.resource textarea{
-	font-size: .9em;
-	color: #666;
-	padding: 2px 5px;
+  font-size: .9em;
+  color: #666;
+  padding: 2px 5px;
 }
 
 form.resource input[type=text], form.resource textarea{
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border: 1px solid #999;
-	width: 500px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 1px solid #999;
+  width: 500px;
 }
 
 form.resource input:focus[type=text]{
-	border-color: #333;
+  border-color: #333;
 }
 
 form.resource textarea{
@@ -352,19 +352,19 @@ form.resource textarea{
 }
 
 form .left-col{
-	width: 30%;
+  width: 30%;
 }
 
 form .submit input{
-/*	color: green;*/
+/*  color: green;*/
 }
 
 /* errors
 --------------------------------------------------------------*/
 
 .errorlist {
-	color: #a00;
-	margin: 0 0 20px 20px;
+  color: #a00;
+  margin: 0 0 20px 20px;
 }
 
 
@@ -372,31 +372,31 @@ form .submit input{
 --------------------------------------------------------------*/
 
 .pager{
-	margin: 30px 0;
-	text-align: center;
+  margin: 30px 0;
+  text-align: center;
 }
 .pager li{
-	display: inline;
+  display: inline;
 }
 .pager .disabled{
-	display: none;
+  display: none;
 }
 .pager a{
-	border: 1px solid;
-	padding: 3px 5px;
-	margin: 0 1px;
-	border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-khtml-border-radius: 2px;
+  border: 1px solid;
+  padding: 3px 5px;
+  margin: 0 1px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
 }
 .pager a:hover{
-	color: #000;
+  color: #000;
 }
 .pager .active a{
-	color: #fff;
-	background: #528e00;
-	border-color: #528e00;
+  color: #fff;
+  background: #528e00;
+  border-color: #528e00;
 }
 
 
@@ -404,16 +404,16 @@ form .submit input{
 -------------------------------------------------------------*/
 
 #footer {
-	text-align: center;
-	padding:10px 5%;
-	background:#efefef;
-	color:#999;
-	font-size:85%;
-	line-height:1.5;
-	border-top:5px
-	solid #ccc;
-	padding-top:10px;
+  text-align: center;
+  padding:10px 5%;
+  background:#efefef;
+  color:#999;
+  font-size:85%;
+  line-height:1.5;
+  border-top:5px
+  solid #ccc;
+  padding-top:10px;
 }
 #footer p a {
-	color:#999;
+  color:#999;
 }

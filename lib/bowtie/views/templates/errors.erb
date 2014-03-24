@@ -1,0 +1,13 @@
+<% if @resource and @resource.errors.any? %>
+
+<div class="errorlist">
+
+  <ul>
+  <% @resource.errors.each do |key, message| %>
+    <li><strong><%= key %></strong><%= ": #{message}" if message %></li>
+  <% end %>
+  </ul>
+
+</div>
+
+<% end %>

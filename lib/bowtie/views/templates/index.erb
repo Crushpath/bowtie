@@ -7,14 +7,14 @@
 
 <% if @resources.any? %>
 
-	<%= show_pager(@resources, request.path_info) %>
+  <%= show_pager(@resources, request.path_info) %>
 
-	<%= partial(:table) %>
+  <%= partial(:table) %>
 
-	<%= show_pager(@resources, request.path_info) %>
+  <%= show_pager(@resources, request.path_info) %>
 
 <% else %>
 
-	<h2>No records found.</h2>
+  <h2>No records found.</h2>
 
 <% end %>

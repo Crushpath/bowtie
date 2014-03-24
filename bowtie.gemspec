@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{bowtie}
-  s.version = "0.6.0"
+  s.version = "0.7.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tomás Pollak"]
@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
               "lib/bowtie/admin.rb",
               "lib/bowtie/core_extensions.rb",
               "lib/bowtie/helpers.rb",
+              "lib/bowtie/configuration.rb",
               "lib/bowtie/views/errors.erb",
               "lib/bowtie/views/field.erb",
               "lib/bowtie/views/flash.erb",

@@ -2,7 +2,7 @@
 <div id="assocs">
 
 <% @model.model_associations.each do |rel_name, assoc| %>
-	<%= rel_name %>: <strong><%= render_assoc_row(@resource, rel_name, assoc) %></strong>
+  <%= rel_name %>: <strong><%= render_assoc_row(@resource, rel_name, assoc) %></strong>
 <% end %>
 
 </div><!-- /assocs -->
@@ -11,8 +11,8 @@
 <h1><%= @title || @model.name + ':' + @resource.id.to_s %></h1>
 
 <form class="big destroy" method="post" action="<%= model_path(@resource.class) %>/<%= @resource.id %>" onsubmit="return confirm('Are you sure?');">
-	<input type="hidden" name="_method" value="delete" />
-	<button type="submit">Destroy</button>
+  <input type="hidden" name="_method" value="delete" />
+  <button type="submit">Destroy</button>
 </form>
 
 <%= partial(:form) %>
