@@ -1,14 +1,14 @@
 Gem::Specification.new do |s|
   s.name = %q{bowtie}
-  s.version = "0.5.8"
+  s.version = "0.6.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tomás Pollak"]
   s.email = %q{tomas@forkhq.com}
   s.date = %q{2012-04-18}
-  s.description = %q{Simple admin scaffold for MongoMapper and DataMapper models.}
+  s.description = %q{Simple admin scaffold for MongoMapper, DataMapper and Mongoid models.}
   s.rubyforge_project = %q{bowtie}
-  s.summary = %q{MongoMapper & DataMapper admin interface}
+  s.summary = %q{MongoMapper, DataMapper & Mongoid admin interface}
   s.extra_rdoc_files = [ "lib/bowtie.rb",
                          "lib/bowtie/admin.rb",
                          "lib/bowtie/core_extensions.rb",
