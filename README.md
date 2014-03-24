@@ -15,7 +15,7 @@ Include it in your Gemfile and update your bundle:
     source 'rubygems.org'
     ..
     gem 'bowtie'
-  
+
 Or install it by hand:
 
     $ (sudo) gem install bowtie
@@ -55,16 +55,44 @@ Additionally you need to make sure that all models have been loaded because Rail
 ### Try it out!
 Now you can go to /admin in your app's path and try out Bowtie using your user/pass combination. If not set, it defaults to admin/bowtie.
 
+### Customization:
+
+With Bowtie you can specify what fields to show on every page:
+
+#### Index:
+
+```ruby
+Bowtie.configure User do
+  index do |i|
+    i.column :first_name
+    i.column :last_name
+    i.column :age
+  end
+end
+```
+
+#### Show:
+
+```
+Soon
+```
+
+#### Edit/Form:
+
+```
+Soon
+```
+
 ## Important notes
 
-Bowtie requires a few gems but they're not included in the gemspec to prevent forcing your from installing unneeded gems. Therefore you need to make sure that Bowtie will have the following gems to work with: 
+Bowtie requires a few gems but they're not included in the gemspec to prevent forcing your from installing unneeded gems. Therefore you need to make sure that Bowtie will have the following gems to work with:
 
 For MongoMapper models:
- 
+
  * mongo_mapper
  * bson_ext (not required, but recommended)
 
-For DataMapper models: 
+For DataMapper models:
 
  * dm-core
  * dm-validations
