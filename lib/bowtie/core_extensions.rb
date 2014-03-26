@@ -79,7 +79,7 @@ class Hash
   def parse_hash_fields(model)
     if model.respond_to?(:hash_fields)
       model.hash_fields.each do |field|
-        self[field] = eval(self[field]) if self.has_key?(field)
+        self[field] = parse_string(self[field]) if self.has_key?(field)
       end
     end
     self
@@ -88,7 +88,7 @@ class Hash
   def parse_array_fields(model)
     if model.respond_to?(:array_fields)
       model.array_fields.each do |field|
-        self[field] = eval(self[field]) if self.has_key?(field)
+        self[field] = parse_string(self[field]) if self.has_key?(field)
       end
     end
     self
@@ -103,5 +103,14 @@ class Hash
 		end
 		normalized
 	end
+
+  private
+
+  def parse_string(string)
+    formatted_string = string.to_s.strip
+    unless formatted_string.empty?
+      JSON.parse(formatted_string.gsub('=>',':'))
+    end
+  end
 
 end
