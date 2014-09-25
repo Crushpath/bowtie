@@ -101,7 +101,10 @@ module Bowtie
     end
 
     def searchable_fields
-      fields_for_type(String) - ["_type"]
+      [fields_for_type(String),
+       fields_for_type(Integer),
+       fields_for_type(Boolean)
+      ].flatten.uniq - ["_type"]
     end
 
     def subtypes
