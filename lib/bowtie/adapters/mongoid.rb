@@ -3,15 +3,12 @@ module Bowtie
   def self.models
     models = Object.constants
                    .collect { |sym| Object.const_get(sym) }
-                   .select { |constant| constant.class == Class && constant.include?(Mongoid::Document) && !constant.embedded? }
+                   .select { |constant| constant.class == Class && constant.include?(::Mongoid::Document) && !constant.embedded? }
   end
 
   def self.search(model, q, page)
-    res = []
-    model.searchable_fields.each do |field|
-      res = res + add_paging(model.where(field.to_sym => /#{q}/i), page).all
-    end
-    res.uniq
+    search_engine = Mongoid::SearchEngine.new(model, q, page)
+    search_engine.get_results
   end
 
   def self.get_many(model, params, page)
@@ -44,11 +41,11 @@ module Bowtie
   end
 
   def self.belongs_to_association?(assoc)
-    assoc.relation.in? [ Mongoid::Relations::Referenced::In, Mongoid::Relations::Embedded::In ]
+    assoc.relation.in? [ ::Mongoid::Relations::Referenced::In, ::Mongoid::Relations::Embedded::In ]
   end
 
   def self.has_one_association?(assoc)
-    assoc.relation.in? [ Mongoid::Relations::Referenced::One, Mongoid::Relations::Embedded::One ]
+    assoc.relation.in? [ ::Mongoid::Relations::Referenced::One, ::Mongoid::Relations::Embedded::One ]
   end
 
   def self.get_count(record, association)
@@ -104,7 +101,10 @@ module Bowtie
     end
 
     def searchable_fields
-      fields_for_type(String) - ["_type"]
+      [fields_for_type(String),
+       fields_for_type(Integer),
+       fields_for_type(Boolean)
+      ].flatten.uniq - ["_type"]
     end
 
     def subtypes

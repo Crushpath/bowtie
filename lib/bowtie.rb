@@ -12,7 +12,7 @@ if defined?(DataMapper)
 elsif defined?(MongoMapper)
   %w(mongo_mapper adapters/mongomapper).each {|lib| require lib}
 elsif defined?(Mongoid)
-  %w(mongoid adapters/mongoid).each {|lib| require lib}
+  %w(mongoid adapters/mongoid mongoid/search_engine).each {|lib| require lib}
 else
   raise Gem::LoadError, "No adapters found. You need to require MongoMapper (mongo_mapper), DataMapper (dm-core) or Mongoid (mongoid) before requiring Bowtie."
 end
